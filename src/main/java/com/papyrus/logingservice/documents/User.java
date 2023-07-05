@@ -12,9 +12,9 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Data
 @Entity
+@Data
+@Builder
 @Table(name = "employee")
 public class User implements UserDetails {
 

@@ -27,6 +27,7 @@ public class UserService implements IUserService{
         _authManager = authManager;
     }
 
+    @Override
     public AuthenticationResponse signUp(SignInRequest request){
         var user = User.builder()
                 .firstName(request.getFirstName())
@@ -44,6 +45,7 @@ public class UserService implements IUserService{
         return response;
     }
 
+    @Override
     public AuthenticationResponse logIn(LogInRequest request) {
         _authManager.authenticate(
                 new UsernamePasswordAuthenticationToken(

@@ -1,18 +1,43 @@
-spring:
-  datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://ishan\\sqlexpress:1434;databaseName=PapyrusDocsDB;encrypt=true;trustServerCertificate=true;
-    username: ick
-    password: ishan123
+#spring:
+#  datasource:
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    url: jdbc:sqlserver://ishan\\sqlexpress:1434;databaseName=PapyrusDocsDB;encrypt=true;trustServerCertificate=true;
+#    username: ick
+#    password: ishan123
+#
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#        dialect: org.hibernate.dialect.SQLServer2012Dialect
+#    hibernate:
+#      ddl-auto: update
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
+server:
+  port: 8082
+
+spring:
+  application:
+    name: login-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb
+    username: root
+    password: Ishan,1998
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-        dialect: org.hibernate.dialect.SQLServer2012Dialect
     hibernate:
       ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: https://discovery-server-ishi-31114c085ec3.herokuapp.com/eureka
+

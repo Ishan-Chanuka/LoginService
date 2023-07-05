@@ -1,16 +1,11 @@
 package com.papyrus.logingservice.controller;
 
-import com.papyrus.logingservice.documents.User;
 import com.papyrus.logingservice.models.AuthenticationResponse;
 import com.papyrus.logingservice.models.LogInRequest;
 import com.papyrus.logingservice.models.SignInRequest;
 import com.papyrus.logingservice.services.IUserService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/main")
