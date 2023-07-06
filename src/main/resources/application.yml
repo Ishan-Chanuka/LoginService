@@ -23,9 +23,9 @@ spring:
   application:
     name: login-service
   datasource:
-    url: jdbc:mysql://localhost:3306/userdb
+    url: jdbc:mysql://34.133.230.223/userdb
     username: root
-    password: Ishan,1998
+    password: ishan,1998
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
